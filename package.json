@@ -1,0 +1,46 @@
+{
+  "name": "grunt-standard-version",
+  "description": "Grunt.js plugin with automatic versioning (unsing 'semver') and CHANGELOG generation (using 'standard-version')",
+  "version": "1.0.0",
+  "homepage": "https://github.com/khatastroffik/grunt-standard-version",
+  "author": {
+    "name": "Loïs Bégué",
+    "url": "https://github.com/khatastroffik"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/khatastroffik/grunt-standard-version.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khatastroffik/grunt-standard-version/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "version": "grunt version"
+  },
+  "dependencies": {
+    "standard-version": "^7.1.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-nodeunit": "^2.1.0",
+    "grunt": "~1.1.0"
+  },
+  "keywords": [
+    "gruntplugin",
+    "grunt",
+    "grunt-task",
+    "CHANGELOG",
+    "semver",
+    "GitHub",
+    "release",
+    "release-automation",
+    "conventional-commit",
+    "standard-version"
+  ]
+}
