@@ -107,13 +107,15 @@ Further details: see [standard-version default configuration](https://github.com
 
 ### Example
 
+This is an example of the **standardVersion** task configuration using a target named "version".
+
 ```js
 grunt.initConfig({
 
   //...
   standardVersion: {
     options: {
-      releaseCommitMessageFormat: 'SuperProject %s',
+      releaseCommitMessageFormat: 'SuperProject {{currentTag}}',
       prerelease: 'alpha',
       silent: true,
       header: '# This is the changelog of the SuperProject\n\n',
