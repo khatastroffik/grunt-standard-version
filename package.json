@@ -1,7 +1,7 @@
 {
   "name": "@khatastroffik/grunt-standard-version",
   "description": "Grunt.js plugin with automatic versioning (unsing 'semver') and CHANGELOG generation (using 'standard-version')",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/khatastroffik/grunt-standard-version",
   "author": {
     "name": "Loïs Bégué",
