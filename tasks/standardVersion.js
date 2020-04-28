@@ -9,6 +9,7 @@
 
 'use strict';
 var standard_version = require('standard-version');
+const { getConfiguration } = require('standard-version/lib/configuration');
 
 /* 
   ===================================================================
@@ -42,10 +43,12 @@ var DEFAULT_OPTIONS = {
 };
 
 module.exports = function (grunt) {
+
   grunt.registerMultiTask('standardVersion', 'bump your package version, update CHANGELOG and stage both', function () {
     
     var done = this.async();
-    var opt = this.options(DEFAULT_OPTIONS);
+    var localVersionReleaseConfig = getConfiguration();
+    var opt = this.options( {...DEFAULT_OPTIONS, ...localVersionReleaseConfig} );
 
     function handleError(err) {
       if (opt.continueIfError) {

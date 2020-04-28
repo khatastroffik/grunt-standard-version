@@ -30,15 +30,26 @@ module.exports = function(grunt) {
       },
       version: {
         options: {
-          preset: 'angular',
-          header: '# grunt-standard-version changelog\n\nAll notable changes to this project will be documented in this file. See [grunt-standard-version](https://github.com/khatastroffik/grunt-standard-version).\n\n'
+          dryRun: true,
+          header: '# grunt-standard-version changelog\n\nAll notable changes to this project will be documented in this file. See [grunt-standard-version](https://github.com/khatastroffik/grunt-standard-version).\n\n',
         }
       },
       test: {
         options: {
+          dryRun: true,
+          header: "# TEST HEADER\nThis is a test changelog\n\n",
+          types: [
+            {"type": "feat", "section": "TEST Features"},
+            {"type": "fix", "section": "TEST Bug Fixes"},
+            {"type": "chore", "section": "TEST Chore"},
+            {"type": "docs", "section": "TEST Documentation"},
+            {"type": "style", "section": "TEST Style"},
+            {"type": "refactor", "section": "TEST Refactoring"},
+            {"type": "perf", "section": "TEST Performance"},
+            {"type": "test", "section": "TEST Tests"}
+          ]
         }
       }
-
     },
     nodeunit: {
       tests: ['test/*_test.js']

@@ -105,7 +105,18 @@ Overview:
 
 Further details: see [standard-version default configuration](https://github.com/conventional-changelog/standard-version/blob/master/defaults.js) and [standard-version commands](https://github.com/conventional-changelog/standard-version/blob/master/command.js) among others.
 
-### Example
+### Usage of the `.versionrc` (and alternatives) configuration
+
+The [conventional-change-spec](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.1.0/README.md) v2.1.0 (adopted by standard-version) defines configuration options applicable to the presets i.e. each preset may define it's own "taste" according to the spec.
+
+To apply a **custom spec** i.e. to define a *custom rule set*, you may create a `.versionrc` file in the same directory as the `Gruntfile.js`.
+See *standard-version* [Configuration](https://github.com/conventional-changelog/standard-version#configuration) documentation.
+
+**grunt-standard-version** will *merge the 'versionrc' custom rule set* with the task configuration in the `Gruntfile.js`. Rules defined in the gruntfile take absolute precedence over the versionrc configuration. This matches with the CLI behavior.
+
+Note: the option `header` defined in the **conventional-change-spec** (see above) is *not respected by standard-version 7.1.0*. Instead, `header` is defined as a *root option* by standard-version. This may change in the future (fix?). See the configuration example below.
+
+### Gruntfile Configuration Example
 
 This is an example of the **standardVersion** task configuration using a target named "version".
 
