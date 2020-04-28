@@ -1,0 +1,14 @@
+{
+  "types": [
+    {"type":"feat","section":"Features"},
+    {"type":"fix","section":"Bug Fixes"}, 
+    {"type":"docs","section":"Documentation", "hidden": false}, 
+    {"type":"chore","section":"Modification of the app structure/core", "hidden": false},
+    {"type":"test","section":"Tests", "hidden": true},
+    {"type":"build","section":"Build System", "hidden": false},
+    {"type": "style", "hidden": true},
+    {"type": "refactor", "hidden": true},
+    {"type": "perf", "hidden": true},    
+    {"type":"ci","hidden":true}
+  ]
+}
